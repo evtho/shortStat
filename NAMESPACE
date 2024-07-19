@@ -3,5 +3,6 @@
 export(mean_na)
 export(mode_na)
 export(summary_stats)
+export(uniform_sex)
 importFrom(stats,median)
 importFrom(stats,sd)

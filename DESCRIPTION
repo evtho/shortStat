@@ -1,10 +1,11 @@
 Package: shortStat
-Title: Short and Simple Statistical Functions
+Title: Short and Simple Statistical Functions and Tools
 Version: 0.0.0.9000
 Authors@R: 
     person("Eva", "Thoma", , "eva.thoma@campus.lmu.de", role = c("aut", "cre"))
-Description: The package helps to get basic statistical parameters and helps ignoring non numerical/ incorrect entries in the data.
+Description: The package helps to get basic statistical parameters and helps ignoring non numerical/ incorrect entries in the data. It also helps to quickly normalize gender data so that you can work with it.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports: stats
