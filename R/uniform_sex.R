@@ -8,18 +8,15 @@
 #' @examples
 #' uniform_sex(c("M", "D", "F", "W", "m", "d", "f", "w"))
 uniform_sex <- function(x) {
-  x <- as.character(x)
+  x <- tolower(as.character(x))
 
-  valid_values <- c("M", "D", "F", "W", "m", "d", "f", "w")
+  valid_values <- c("m", "d", "f", "w")
   if (!all(x %in% valid_values)) {
     stop("Input vector must only contain valid sex/gender values (M, D, F, W, m, d, f, w).")
   }
 
-  # Normalize values
-  x[x == "M"] <- "m"
-  x[x == "D"] <- "d"
-  x[x == "F"] <- "f"
-  x[x == "W" | x == "w"] <- "f"
+  x[x == "w"] <- "f"
 
   return(x)
 }
+
