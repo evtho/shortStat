@@ -8,8 +8,15 @@
 #' @examples
 #' mode_na(c(1, 2, "a", NA, 4, 5, "b", 5))
 mode_na <- function(x) {
+
   numeric_values <- as.numeric(x)
   numeric_values <- numeric_values[!is.na(numeric_values)]
+
   uniq_x <- unique(numeric_values)
-  return(uniq_x[which.max(tabulate(match(numeric_values, uniq_x)))])
+  freq <- tabulate(match(numeric_values, uniq_x))
+
+  max_freq <- max(freq)
+
+  modes <- uniq_x[freq == max_freq]
+  return(modes)
 }
